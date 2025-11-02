@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Alcohol Rule Checker (2025 Update)&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Load Tailwind CSS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Custom font for modern aesthetic */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f7f9fb;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Style for the prohibited rules */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.prohibited {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 6px solid #ef4444; /* red-500 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fef2f2; /* red-50 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Style for the allowed rules */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.allowed {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 6px solid #10b981; /* emerald-500 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #ecfdf5; /* emerald-50 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Style for conditional rules */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.conditional {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 6px solid #f97316; /* orange-600 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fff7ed; /* orange-50 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Style for active tabs */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #3b82f6 !important; /* blue-500 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white !important;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="p-4 sm:p-8 min-h-screen"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-4xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Header --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;header class="text-center mb-8 p-6 bg-white rounded-xl shadow-lg border-b-4 border-red-600"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-4xl font-extrabold text-gray-900 mb-1 leading-tight"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-red-600"&gt;🚫&lt;/span&gt; Alcohol Rules Checker</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-lg text-gray-500 mt-2"&gt;Sale &amp; Consumption Bans (2025 Update)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Category Tabs --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="tab-container" class="flex flex-wrap justify-center gap-3 mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Tabs will be dynamically inserted here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Rules Display Area --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="rules-display" class="space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Rules cards will be dynamically inserted here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// --- Infographic Data Structure ---</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const alcoholRules = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>category: "Core Rules",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>title: "Core Rule &amp; Exemptions",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon: "⚖️",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>color: "text-red-600",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>details: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Public Bans Remain", description: "Consumption is generally prohibited in public areas.", type: "Prohibited" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Private Residences", description: "Consumption is allowed in your own home (private property).", type: "Allowed" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Licensed Clubs &amp; Ceremonies", description: "Consumption is allowed in legally licensed clubs and during traditional ceremonies.", type: "Allowed" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>category: "Location Bans",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>title: "Strictly Forbidden Zones",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon: "❌",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>color: "text-red-600",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>details: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Educational Areas", description: "Schools, Universities, and nearby Dormitories or related facilities.", type: "Prohibited" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "State Offices/Premises", description: "Government buildings and compounds (Excluding staff residences/clubs/ceremonies).", type: "Prohibited" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Public Parks", description: "Public parks or recreational areas designated for public use.", type: "Prohibited" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>category: "Transportation",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>title: "Transport &amp; Vehicles",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon: "🚗",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>color: "text-red-600",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>details: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "All Vehicles", description: "Banned for both drivers and passengers.", type: "Prohibited" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Transport Facilities", description: "Railway stations, land transport terminals, ferry terminals, and onboard ferries/trains.", type: "Prohibited" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>category: "Industrial",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>title: "Factories &amp; Industrial Premises",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon: "🏭",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>color: "text-orange-500",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>details: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "General Rule", description: "Consumption is generally prohibited on industrial premises under the Factory Act.", type: "Prohibited" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "QC Exception", description: "Allowed ONLY for Quality Control (QC) or manufacturing standards, OR sales as part of normal on-site business.", type: "Allowed (Conditional)" },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let activeCategory = 'All'; // Default state</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// --- Helper Function to Render Rule Cards ---</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function renderRuleCard(rule) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let typeClass = '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let indicator = '';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>switch (rule.type) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>case 'Prohibited':</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>typeClass = 'prohibited';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>indicator = '🚫 BANNED';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>case 'Allowed':</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>typeClass = 'allowed';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>indicator = '✅ ALLOWED';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>case 'Allowed (Conditional)':</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>typeClass = 'conditional';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>indicator = '⚠️ CONDITIONAL';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>default:</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>typeClass = '';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>indicator = 'INFO';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>return `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-5 rounded-xl shadow-md transition duration-300 ease-in-out hover:shadow-lg ${typeClass}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center justify-between mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-semibold text-gray-800"&gt;${rule.rule}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-sm font-bold px-3 py-1 rounded-full ${rule.type === 'Prohibited' ? 'bg-red-200 text-red-800' : rule.type === 'Allowed' ? 'bg-emerald-200 text-emerald-800' : 'bg-orange-200 text-orange-800'}"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>${indicator}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600"&gt;${rule.description}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// --- Main Rendering Function ---</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function renderRules(category) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const displayArea = document.getElementById('rules-display');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>displayArea.innerHTML = '';</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Filter the rules based on the active category</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const filteredRules = category === 'All'</p>
+<p class="p1"><span class="Apple-converted-space">                </span>? alcoholRules</p>
+<p class="p1"><span class="Apple-converted-space">                </span>: alcoholRules.filter(group =&gt; group.category === category);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (filteredRules.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayArea.innerHTML = `&lt;p class="text-center text-gray-500 p-8 bg-white rounded-lg shadow-md"&gt;No rules found for this category.&lt;/p&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Render the cards for the filtered groups</p>
+<p class="p1"><span class="Apple-converted-space">            </span>filteredRules.forEach(group =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const groupHtml = `</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-6 rounded-xl shadow-xl space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-2xl font-bold ${group.color} border-b-2 pb-2 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>${group.icon} ${group.title}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>${group.details.map(renderRuleCard).join('')}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>displayArea.innerHTML += groupHtml;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Update tab styles</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.tab-button').forEach(button =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>button.classList.remove('tab-active');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (button.dataset.category === category) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.classList.add('tab-active');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>activeCategory = category;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// --- Render Tabs ---</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function renderTabs() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const tabContainer = document.getElementById('tab-container');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const uniqueCategories = ['All', ...new Set(alcoholRules.map(rule =&gt; rule.category))];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>uniqueCategories.forEach(cat =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const button = document.createElement('button');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>button.className = 'tab-button px-4 py-2 text-sm font-semibold rounded-full transition duration-150 ease-in-out bg-white text-gray-700 hover:bg-gray-100 shadow-md';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>button.textContent = cat;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>button.dataset.category = cat;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>button.addEventListener('click', () =&gt; renderRules(cat));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tabContainer.appendChild(button);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initialize App</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderTabs();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Default view: show all rules initially</p>
+<p class="p1"><span class="Apple-converted-space">            </span>renderRules('All');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
