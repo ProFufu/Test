@@ -7,220 +7,241 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2685.1">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4689cc; -webkit-text-stroke: #4689cc}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #8cd3fe; -webkit-text-stroke: #8cd3fe}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #c27e65; -webkit-text-stroke: #c27e65}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d7378; -webkit-text-stroke: #6d7378}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #a7c598; -webkit-text-stroke: #a7c598}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #cacaca; -webkit-text-stroke: #cacaca; min-height: 16.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #71c083; -webkit-text-stroke: #71c083}
+    span.s1 {font-kerning: none; background-color: #171818}
+    span.s2 {font-kerning: none; color: #8cd3fe; background-color: #171818; -webkit-text-stroke: 0px #8cd3fe}
+    span.s3 {font-kerning: none; color: #6d6d6d; background-color: #171818; -webkit-text-stroke: 0px #6d6d6d}
+    span.s4 {font-kerning: none; color: #cacaca; background-color: #171818; -webkit-text-stroke: 0px #cacaca}
+    span.s5 {font-kerning: none; color: #c27e65; background-color: #171818; -webkit-text-stroke: 0px #c27e65}
+    span.s6 {font-kerning: none; color: #4689cc; background-color: #171818; -webkit-text-stroke: 0px #4689cc}
+    span.s7 {font-kerning: none; color: #d4d4d4; background-color: #171818; -webkit-text-stroke: 0px #d4d4d4}
+    span.s8 {font-kerning: none; color: #71c083; background-color: #171818; -webkit-text-stroke: 0px #71c083}
+    span.s9 {font-kerning: none; color: #a7c598; background-color: #171818; -webkit-text-stroke: 0px #a7c598}
+    span.s10 {font-kerning: none; color: #6d7378; background-color: #171818; -webkit-text-stroke: 0px #6d7378}
+    span.s11 {font-kerning: none; color: #b76ff7; background-color: #171818; -webkit-text-stroke: 0px #b76ff7}
+    span.s12 {font-kerning: none}
+    span.s13 {font-kerning: none; color: #f67c30; background-color: #171818; -webkit-text-stroke: 0px #f67c30}
+    span.s14 {font-kerning: none; color: #36c0a0; background-color: #171818; -webkit-text-stroke: 0px #36c0a0}
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Alcohol Rule Checker (2025 Update)&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Load Tailwind CSS --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Custom font for modern aesthetic */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f7f9fb;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Style for the prohibited rules */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.prohibited {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-left: 6px solid #ef4444; /* red-500 */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fef2f2; /* red-50 */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Style for the allowed rules */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.allowed {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-left: 6px solid #10b981; /* emerald-500 */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #ecfdf5; /* emerald-50 */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Style for conditional rules */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.conditional {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-left: 6px solid #f97316; /* orange-600 */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fff7ed; /* orange-50 */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* Style for active tabs */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.tab-active {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #3b82f6 !important; /* blue-500 */</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white !important;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="p-4 sm:p-8 min-h-screen"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-4xl mx-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Header --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;header class="text-center mb-8 p-6 bg-white rounded-xl shadow-lg border-b-4 border-red-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-4xl font-extrabold text-gray-900 mb-1 leading-tight"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-red-600"&gt;🚫&lt;/span&gt; Alcohol Rules Checker</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-lg text-gray-500 mt-2"&gt;Sale &amp; Consumption Bans (2025 Update)&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Category Tabs --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="tab-container" class="flex flex-wrap justify-center gap-3 mb-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Tabs will be dynamically inserted here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Rules Display Area --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="rules-display" class="space-y-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Rules cards will be dynamically inserted here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// --- Infographic Data Structure ---</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const alcoholRules = [</p>
-<p class="p1"><span class="Apple-converted-space">            </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                </span>category: "Core Rules",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>title: "Core Rule &amp; Exemptions",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>icon: "⚖️",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>color: "text-red-600",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>details: [</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Public Bans Remain", description: "Consumption is generally prohibited in public areas.", type: "Prohibited" },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Private Residences", description: "Consumption is allowed in your own home (private property).", type: "Allowed" },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Licensed Clubs &amp; Ceremonies", description: "Consumption is allowed in legally licensed clubs and during traditional ceremonies.", type: "Allowed" },</p>
-<p class="p1"><span class="Apple-converted-space">                </span>]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                </span>category: "Location Bans",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>title: "Strictly Forbidden Zones",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>icon: "❌",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>color: "text-red-600",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>details: [</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Educational Areas", description: "Schools, Universities, and nearby Dormitories or related facilities.", type: "Prohibited" },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "State Offices/Premises", description: "Government buildings and compounds (Excluding staff residences/clubs/ceremonies).", type: "Prohibited" },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Public Parks", description: "Public parks or recreational areas designated for public use.", type: "Prohibited" },</p>
-<p class="p1"><span class="Apple-converted-space">                </span>]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                </span>category: "Transportation",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>title: "Transport &amp; Vehicles",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>icon: "🚗",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>color: "text-red-600",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>details: [</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "All Vehicles", description: "Banned for both drivers and passengers.", type: "Prohibited" },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "Transport Facilities", description: "Railway stations, land transport terminals, ferry terminals, and onboard ferries/trains.", type: "Prohibited" },</p>
-<p class="p1"><span class="Apple-converted-space">                </span>]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>},</p>
-<p class="p1"><span class="Apple-converted-space">            </span>{</p>
-<p class="p1"><span class="Apple-converted-space">                </span>category: "Industrial",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>title: "Factories &amp; Industrial Premises",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>icon: "🏭",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>color: "text-orange-500",</p>
-<p class="p1"><span class="Apple-converted-space">                </span>details: [</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "General Rule", description: "Consumption is generally prohibited on industrial premises under the Factory Act.", type: "Prohibited" },</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>{ rule: "QC Exception", description: "Allowed ONLY for Quality Control (QC) or manufacturing standards, OR sales as part of normal on-site business.", type: "Allowed (Conditional)" },</p>
-<p class="p1"><span class="Apple-converted-space">                </span>]</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>];</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>let activeCategory = 'All'; // Default state</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// --- Helper Function to Render Rule Cards ---</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function renderRuleCard(rule) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let typeClass = '';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let indicator = '';</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>switch (rule.type) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case 'Prohibited':</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>typeClass = 'prohibited';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>indicator = '🚫 BANNED';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case 'Allowed':</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>typeClass = 'allowed';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>indicator = '✅ ALLOWED';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>case 'Allowed (Conditional)':</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>typeClass = 'conditional';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>indicator = '⚠️ CONDITIONAL';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>break;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>default:</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>typeClass = '';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>indicator = 'INFO';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>return `</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-5 rounded-xl shadow-md transition duration-300 ease-in-out hover:shadow-lg ${typeClass}"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center justify-between mb-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-semibold text-gray-800"&gt;${rule.rule}&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-sm font-bold px-3 py-1 rounded-full ${rule.type === 'Prohibited' ? 'bg-red-200 text-red-800' : rule.type === 'Allowed' ? 'bg-emerald-200 text-emerald-800' : 'bg-orange-200 text-orange-800'}"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>${indicator}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600"&gt;${rule.description}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// --- Main Rendering Function ---</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function renderRules(category) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const displayArea = document.getElementById('rules-display');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>displayArea.innerHTML = '';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Filter the rules based on the active category</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const filteredRules = category === 'All'</p>
-<p class="p1"><span class="Apple-converted-space">                </span>? alcoholRules</p>
-<p class="p1"><span class="Apple-converted-space">                </span>: alcoholRules.filter(group =&gt; group.category === category);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (filteredRules.length === 0) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>displayArea.innerHTML = `&lt;p class="text-center text-gray-500 p-8 bg-white rounded-lg shadow-md"&gt;No rules found for this category.&lt;/p&gt;`;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Render the cards for the filtered groups</p>
-<p class="p1"><span class="Apple-converted-space">            </span>filteredRules.forEach(group =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const groupHtml = `</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-6 rounded-xl shadow-xl space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-2xl font-bold ${group.color} border-b-2 pb-2 mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>${group.icon} ${group.title}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>${group.details.map(renderRuleCard).join('')}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>displayArea.innerHTML += groupHtml;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Update tab styles</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.tab-button').forEach(button =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>button.classList.remove('tab-active');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (button.dataset.category === category) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>button.classList.add('tab-active');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>activeCategory = category;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// --- Render Tabs ---</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function renderTabs() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const tabContainer = document.getElementById('tab-container');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const uniqueCategories = ['All', ...new Set(alcoholRules.map(rule =&gt; rule.category))];</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>uniqueCategories.forEach(cat =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const button = document.createElement('button');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>button.className = 'tab-button px-4 py-2 text-sm font-semibold rounded-full transition duration-150 ease-in-out bg-white text-gray-700 hover:bg-gray-100 shadow-md';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>button.textContent = cat;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>button.dataset.category = cat;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>button.addEventListener('click', () =&gt; renderRules(cat));</p>
-<p class="p1"><span class="Apple-converted-space">                </span>tabContainer.appendChild(button);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Initialize App</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>renderTabs();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Default view: show all rules initially</p>
-<p class="p1"><span class="Apple-converted-space">            </span>renderRules('All');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"en"</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">Alcohol Rule Checker (2025 Update)</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Load Tailwind CSS --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Custom font for modern aesthetic */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">body</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s8">'Inter'</span><span class="s7">,</span><span class="s1"> </span><span class="s5">sans-serif</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #f7f9fb</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Style for the prohibited rules */</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.prohibited</span><span class="s4"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-left:</span><span class="s1"> </span><span class="s9">6px</span><span class="s1"> </span><span class="s5">solid</span><span class="s1"> #ef4444</span><span class="s7">;</span><span class="s1"> </span><span class="s10">/* red-500 */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #fef2f2</span><span class="s7">;</span><span class="s1"> </span><span class="s10">/* red-50 */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Style for the allowed rules */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">.allowed</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-left:</span><span class="s1"> </span><span class="s9">6px</span><span class="s1"> </span><span class="s5">solid</span><span class="s1"> #10b981</span><span class="s7">;</span><span class="s1"> </span><span class="s10">/* emerald-500 */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #ecfdf5</span><span class="s7">;</span><span class="s1"> </span><span class="s10">/* emerald-50 */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Style for conditional rules */</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.conditional</span><span class="s4"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">border-left:</span><span class="s1"> </span><span class="s9">6px</span><span class="s1"> </span><span class="s5">solid</span><span class="s1"> #f97316</span><span class="s7">;</span><span class="s1"> </span><span class="s10">/* orange-600 */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #fff7ed</span><span class="s7">;</span><span class="s1"> </span><span class="s10">/* orange-50 */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">/* Style for active tabs */</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.tab-active</span><span class="s4"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s1"> #3b82f6 </span><span class="s11">!important</span><span class="s7">;</span><span class="s1"> </span><span class="s10">/* blue-500 */</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s5">white</span><span class="s1"> </span><span class="s11">!important</span><span class="s7">;</span></p>
+<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">box-shadow:</span><span class="s4"> </span><span class="s1">0</span><span class="s4"> </span><span class="s1">4px</span><span class="s4"> </span><span class="s1">6px</span><span class="s4"> </span><span class="s1">-1px</span><span class="s4"> </span><span class="s5">rgba(</span><span class="s1">0</span><span class="s7">,</span><span class="s4"> </span><span class="s1">0</span><span class="s7">,</span><span class="s4"> </span><span class="s1">0</span><span class="s7">,</span><span class="s4"> </span><span class="s1">0.1</span><span class="s5">)</span><span class="s7">,</span><span class="s4"> </span><span class="s1">0</span><span class="s4"> </span><span class="s1">2px</span><span class="s4"> </span><span class="s1">4px</span><span class="s4"> </span><span class="s1">-2px</span><span class="s4"> </span><span class="s5">rgba(</span><span class="s1">0</span><span class="s7">,</span><span class="s4"> </span><span class="s1">0</span><span class="s7">,</span><span class="s4"> </span><span class="s1">0</span><span class="s7">,</span><span class="s4"> </span><span class="s1">0.1</span><span class="s5">)</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;</span><span class="s6">body</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-4 sm:p-8 min-h-screen"</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"max-w-4xl mx-auto"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Header --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">header</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-center mb-8 p-6 bg-white rounded-xl shadow-lg border-b-4 border-red-600"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-4xl font-extrabold text-gray-900 mb-1 leading-tight"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">span</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-red-600"</span><span class="s3">&gt;</span><span class="s1">🚫</span><span class="s3">&lt;/</span><span class="s6">span</span><span class="s3">&gt;</span><span class="s1"> Alcohol Rules Checker</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">p</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-lg text-gray-500 mt-2"</span><span class="s3">&gt;</span><span class="s1">Sale &amp; Consumption Bans (2025 Update)</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">header</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Category Tabs --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"tab-container"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-wrap justify-center gap-3 mb-8"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Tabs will be dynamically inserted here --&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Rules Display Area --&gt;</span></p>
+<p class="p3"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"rules-display"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"space-y-6"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Rules cards will be dynamically inserted here --&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// --- Infographic Data Structure ---</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">const</span><span class="s1"> alcoholRules </span><span class="s7">=</span><span class="s1"> </span><span class="s7">[</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>category</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"Core Rules"</span><span class="s7">,</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span>title</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Core Rule &amp; Exemptions"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"⚖️"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>color</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"text-red-600"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>details</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s4"> rule</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Public Bans Remain"</span><span class="s7">,</span><span class="s4"> description</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Consumption is generally prohibited in public areas."</span><span class="s7">,</span><span class="s4"> type</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Prohibited"</span><span class="s4"> </span><span class="s7">},</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s4"> rule</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Private Residences"</span><span class="s7">,</span><span class="s4"> description</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Consumption is allowed in your own home (private property)."</span><span class="s7">,</span><span class="s4"> type</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Allowed"</span><span class="s4"> </span><span class="s7">},</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s4"> rule</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Licensed Clubs &amp; Ceremonies"</span><span class="s7">,</span><span class="s4"> description</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Consumption is allowed in legally licensed clubs and during traditional ceremonies."</span><span class="s7">,</span><span class="s4"> type</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Allowed"</span><span class="s4"> </span><span class="s7">},</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">]</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">},</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>category</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"Location Bans"</span><span class="s7">,</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span>title</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Strictly Forbidden Zones"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"❌"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>color</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"text-red-600"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>details</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s4"> rule</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Educational Areas"</span><span class="s7">,</span><span class="s4"> description</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Schools, Universities, and nearby Dormitories or related facilities."</span><span class="s7">,</span><span class="s4"> type</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Prohibited"</span><span class="s4"> </span><span class="s7">},</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s4"> rule</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"State Offices/Premises"</span><span class="s7">,</span><span class="s4"> description</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Government buildings and compounds (Excluding staff residences/clubs/ceremonies)."</span><span class="s7">,</span><span class="s4"> type</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Prohibited"</span><span class="s4"> </span><span class="s7">},</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s4"> rule</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Public Parks"</span><span class="s7">,</span><span class="s4"> description</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Public parks or recreational areas designated for public use."</span><span class="s7">,</span><span class="s4"> type</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Prohibited"</span><span class="s4"> </span><span class="s7">},</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">]</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">},</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>category</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"Transportation"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>title</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"Transport &amp; Vehicles"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"🚗"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>color</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"text-red-600"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>details</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s4"> rule</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"All Vehicles"</span><span class="s7">,</span><span class="s4"> description</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Banned for both drivers and passengers."</span><span class="s7">,</span><span class="s4"> type</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Prohibited"</span><span class="s4"> </span><span class="s7">},</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s4"> rule</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Transport Facilities"</span><span class="s7">,</span><span class="s4"> description</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Railway stations, land transport terminals, ferry terminals, and onboard ferries/trains."</span><span class="s7">,</span><span class="s4"> type</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Prohibited"</span><span class="s4"> </span><span class="s7">},</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">]</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">},</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>category</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"Industrial"</span><span class="s7">,</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span>title</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Factories &amp; Industrial Premises"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>icon</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"🏭"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>color</span><span class="s7">:</span><span class="s1"> </span><span class="s8">"text-orange-500"</span><span class="s7">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>details</span><span class="s7">:</span><span class="s1"> </span><span class="s7">[</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s4"> rule</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"General Rule"</span><span class="s7">,</span><span class="s4"> description</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Consumption is generally prohibited on industrial premises under the Factory Act."</span><span class="s7">,</span><span class="s4"> type</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Prohibited"</span><span class="s4"> </span><span class="s7">},</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s7">{</span><span class="s4"> rule</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"QC Exception"</span><span class="s7">,</span><span class="s4"> description</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Allowed ONLY for Quality Control (QC) or manufacturing standards, OR sales as part of normal on-site business."</span><span class="s7">,</span><span class="s4"> type</span><span class="s7">:</span><span class="s4"> </span><span class="s1">"Allowed (Conditional)"</span><span class="s4"> </span><span class="s7">},</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">]</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">];</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">let</span><span class="s1"> activeCategory </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'All'</span><span class="s7">;</span><span class="s1"> </span><span class="s10">// Default state</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// --- Helper Function to Render Rule Cards ---</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">function</span><span class="s1"> renderRuleCard</span><span class="s7">(</span><span class="s1">rule</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">let</span><span class="s1"> typeClass </span><span class="s7">=</span><span class="s1"> </span><span class="s8">''</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">let</span><span class="s1"> indicator </span><span class="s7">=</span><span class="s1"> </span><span class="s8">''</span><span class="s7">;</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">switch</span><span class="s1"> </span><span class="s7">(</span><span class="s1">rule</span><span class="s7">.</span><span class="s1">type</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">case</span><span class="s1"> </span><span class="s8">'Prohibited'</span><span class="s7">:</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>typeClass </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'prohibited'</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>indicator </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'🚫 BANNED'</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">break</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">case</span><span class="s1"> </span><span class="s8">'Allowed'</span><span class="s7">:</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>typeClass </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'allowed'</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>indicator </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'✅ ALLOWED'</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">break</span><span class="s7">;</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s11">case</span><span class="s4"> </span><span class="s1">'Allowed (Conditional)'</span><span class="s7">:</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>typeClass </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'conditional'</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>indicator </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'⚠️ CONDITIONAL'</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">break</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">default</span><span class="s7">:</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>typeClass </span><span class="s7">=</span><span class="s1"> </span><span class="s8">''</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>indicator </span><span class="s7">=</span><span class="s1"> </span><span class="s8">'INFO'</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">return</span><span class="s1"> </span><span class="s8">`</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="p-5 rounded-xl shadow-md transition duration-300 ease-in-out hover:shadow-lg </span><span class="s7">${</span><span class="s4">typeClass</span><span class="s7">}</span><span class="s1">"&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center justify-between mb-2"&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;h3 class="text-xl font-semibold text-gray-800"&gt;</span><span class="s7">${</span><span class="s4">rule</span><span class="s7">.</span><span class="s4">rule</span><span class="s7">}</span><span class="s1">&lt;/h3&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="text-sm font-bold px-3 py-1 rounded-full </span><span class="s7">${</span><span class="s4">rule</span><span class="s7">.</span><span class="s4">type </span><span class="s7">===</span><span class="s4"> </span><span class="s1">'Prohibited'</span><span class="s4"> </span><span class="s7">?</span><span class="s4"> </span><span class="s1">'bg-red-200 text-red-800'</span><span class="s4"> </span><span class="s7">:</span><span class="s4"> rule</span><span class="s7">.</span><span class="s4">type </span><span class="s7">===</span><span class="s4"> </span><span class="s1">'Allowed'</span><span class="s4"> </span><span class="s7">?</span><span class="s4"> </span><span class="s1">'bg-emerald-200 text-emerald-800'</span><span class="s4"> </span><span class="s7">:</span><span class="s4"> </span><span class="s1">'bg-orange-200 text-orange-800'</span><span class="s7">}</span><span class="s1">"&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s7">${</span><span class="s4">indicator</span><span class="s7">}</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/span&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600"&gt;</span><span class="s7">${</span><span class="s4">rule</span><span class="s7">.</span><span class="s4">description</span><span class="s7">}</span><span class="s1">&lt;/p&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span>`</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// --- Main Rendering Function ---</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">function</span><span class="s1"> renderRules</span><span class="s7">(</span><span class="s1">category</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> displayArea </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'rules-display'</span><span class="s7">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>displayArea</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">=</span><span class="s1"> </span><span class="s8">''</span><span class="s7">;</span></p>
+<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Filter the rules based on the active category</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> filteredRules </span><span class="s7">=</span><span class="s1"> category </span><span class="s7">===</span><span class="s1"> </span><span class="s8">'All'</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">?</span><span class="s1"> alcoholRules</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">:</span><span class="s1"> alcoholRules</span><span class="s7">.</span><span class="s1">filter</span><span class="s7">(</span><span class="s1">group </span><span class="s7">=&gt;</span><span class="s1"> group</span><span class="s7">.</span><span class="s1">category </span><span class="s7">===</span><span class="s1"> category</span><span class="s7">);</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">if</span><span class="s1"> </span><span class="s7">(</span><span class="s1">filteredRules</span><span class="s7">.</span><span class="s1">length </span><span class="s7">===</span><span class="s1"> </span><span class="s13">0</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span>displayArea</span><span class="s7">.</span><span class="s4">innerHTML </span><span class="s7">=</span><span class="s4"> </span><span class="s1">`&lt;p class="text-center text-gray-500 p-8 bg-white rounded-lg shadow-md"&gt;No rules found for this category.&lt;/p&gt;`</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">return</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">}</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Render the cards for the filtered groups</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>filteredRules</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">group </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> groupHtml </span><span class="s7">=</span><span class="s1"> </span><span class="s8">`</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-white p-6 rounded-xl shadow-xl space-y-4"&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-2xl font-bold </span><span class="s7">${</span><span class="s4">group</span><span class="s7">.</span><span class="s4">color</span><span class="s7">}</span><span class="s1"> border-b-2 pb-2 mb-4"&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s7">${</span><span class="s4">group</span><span class="s7">.</span><span class="s4">icon</span><span class="s7">}</span><span class="s1"> </span><span class="s7">${</span><span class="s4">group</span><span class="s7">.</span><span class="s4">title</span><span class="s7">}</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="space-y-4"&gt;</span></p>
+<p class="p4"><span class="s8"><span class="Apple-converted-space">                            </span></span><span class="s7">${</span><span class="s1">group</span><span class="s7">.</span><span class="s1">details</span><span class="s7">.</span><span class="s1">map</span><span class="s7">(</span><span class="s1">renderRuleCard</span><span class="s7">).</span><span class="s1">join</span><span class="s7">(</span><span class="s8">''</span><span class="s7">)}</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">                </span>`</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>displayArea</span><span class="s7">.</span><span class="s1">innerHTML </span><span class="s7">+=</span><span class="s1"> groupHtml</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">});</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Update tab styles</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>document</span><span class="s7">.</span><span class="s1">querySelectorAll</span><span class="s7">(</span><span class="s8">'.tab-button'</span><span class="s7">).</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">button </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>button</span><span class="s7">.</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">remove</span><span class="s7">(</span><span class="s8">'tab-active'</span><span class="s7">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> </span><span class="s7">(</span><span class="s1">button</span><span class="s7">.</span><span class="s1">dataset</span><span class="s7">.</span><span class="s1">category </span><span class="s7">===</span><span class="s1"> category</span><span class="s7">)</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>button</span><span class="s7">.</span><span class="s1">classList</span><span class="s7">.</span><span class="s1">add</span><span class="s7">(</span><span class="s8">'tab-active'</span><span class="s7">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s7">}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">});</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>activeCategory </span><span class="s7">=</span><span class="s1"> category</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// --- Render Tabs ---</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s11">function</span><span class="s1"> renderTabs</span><span class="s7">()</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> tabContainer </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">getElementById</span><span class="s7">(</span><span class="s8">'tab-container'</span><span class="s7">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> uniqueCategories </span><span class="s7">=</span><span class="s1"> </span><span class="s7">[</span><span class="s8">'All'</span><span class="s7">,</span><span class="s1"> </span><span class="s7">...</span><span class="s11">new</span><span class="s1"> </span><span class="s14">Set</span><span class="s7">(</span><span class="s1">alcoholRules</span><span class="s7">.</span><span class="s1">map</span><span class="s7">(</span><span class="s1">rule </span><span class="s7">=&gt;</span><span class="s1"> rule</span><span class="s7">.</span><span class="s1">category</span><span class="s7">))];</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>uniqueCategories</span><span class="s7">.</span><span class="s1">forEach</span><span class="s7">(</span><span class="s1">cat </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> button </span><span class="s7">=</span><span class="s1"> document</span><span class="s7">.</span><span class="s1">createElement</span><span class="s7">(</span><span class="s8">'button'</span><span class="s7">);</span></p>
+<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span>button</span><span class="s7">.</span><span class="s4">className </span><span class="s7">=</span><span class="s4"> </span><span class="s1">'tab-button px-4 py-2 text-sm font-semibold rounded-full transition duration-150 ease-in-out bg-white text-gray-700 hover:bg-gray-100 shadow-md'</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>button</span><span class="s7">.</span><span class="s1">textContent </span><span class="s7">=</span><span class="s1"> cat</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>button</span><span class="s7">.</span><span class="s1">dataset</span><span class="s7">.</span><span class="s1">category </span><span class="s7">=</span><span class="s1"> cat</span><span class="s7">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>button</span><span class="s7">.</span><span class="s1">addEventListener</span><span class="s7">(</span><span class="s8">'click'</span><span class="s7">,</span><span class="s1"> </span><span class="s7">()</span><span class="s1"> </span><span class="s7">=&gt;</span><span class="s1"> renderRules</span><span class="s7">(</span><span class="s1">cat</span><span class="s7">));</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>tabContainer</span><span class="s7">.</span><span class="s1">appendChild</span><span class="s7">(</span><span class="s1">button</span><span class="s7">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s7">});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">}</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// Initialize App</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>document</span><span class="s7">.</span><span class="s1">addEventListener</span><span class="s7">(</span><span class="s8">'DOMContentLoaded'</span><span class="s7">,</span><span class="s1"> </span><span class="s7">()</span><span class="s1"> </span><span class="s7">=&gt;</span><span class="s1"> </span><span class="s7">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>renderTabs</span><span class="s7">();</span></p>
+<p class="p5"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Default view: show all rules initially</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>renderRules</span><span class="s7">(</span><span class="s8">'All'</span><span class="s7">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s7">});</span></p>
+<p class="p7"><span class="s12"></span><br></p>
+<p class="p1"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s12"></span><br></p>
 </body>
 </html>
